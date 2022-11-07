@@ -44,4 +44,5 @@ A: haha, i knew you're gonna ask it. nah, just kidding i didn't know if anybody 
 
 oh and by the way i found out i can't really embed a video here. here's media discord video 
 
-https://media.discordapp.net/attachments/726496597789245493/1037408101864841216/2022-11-02_18-44-11.mp4
+if you are not sure about viruses, just add it as embed in discord. embeds in discords cant be dangerous, max they can do is crash your discrod
+https://cdn.discordapp.com/attachments/726496597789245493/1037408101864841216/2022-11-02_18-44-11.mp4
