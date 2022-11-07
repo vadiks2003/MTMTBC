@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- The upgrades aren't made yet
+    ideas:
+        after sending X amount of letters, you get coins. you can spend these coins on upgrades.
+        upgrade ideas:
+            1. HEX typing: allow user to type in HEX instead of binary. Thanks to binary being annoying to type compared to hex, i suppose i should rather allow it after few binary types
+            2. IMAGE TYPING: i don't know if i can do it, but basically i want a user to be able to upload images, through typing in each HEX value of pixel
+            3. buy image plot
+        ideas on obtaining coins:
+        1 coin per 5 letters sent.
+        2 coins per each pixel in an image
+            (
+             4by4 pixels = 32 coins per image;
+             8by8 pixels = 128 coins per image;
+             16x16 pixels = 512 coins per image
+             24x24 pixels = 1 152 coins per image
+            )
+		ideas on prices:
+        10 coins => hex typing
+        40 coins => image typing (4 by 4 pixels)
+        1.4^A coins => add +1 width and length pixels. "a" is amount of this item bought.
+            meaning if i have 0 a = it costs 1 coin. 
+            if i have 1 a = it costs 1.4 coins       1.4 coins spent overall
+            if i have 2 a = it costs 1.96 coins      3.36 coins spent overall
+            if i have 3 a = it costs 2.74 coins      6.1 coins spent overall
+            if i have 4 a = it costs 3.84 coins      9.94 coins spent overall
+            if i have 5 a = it costs 5.37 coins      15.31 coins spent overall
+            if i have 10 a = it costs 29 coins       97.73 coins spent overall
+            if i have 15 a = it costs 155 coins      540.99 coins spent overall
+            if i have 20 a = it costs 836.68 coins   2 924.89 coins spent overall
+            16x16 would be 12 a's and thats 195 coins overall
+            24x24 would be 20 a's and thats 2 924 coins overall
+            1024x1024 would be 1020 a's and thats... a lot...  4 with 149 zeroes. good luck filling  million pixels with just HEX through
+            etc
+                what its gonna do is: i have 4by4 pixels. i buy one. now its 5 by 5 pixels. i buy two. now its 6 by 6 pixels. i buy 3. now its 7 by 7 pixels
+                4+36 a's =40 by 40 pixels, thats 1600 pixels to fill in manually. fair enough right?
+        allow people to upvote each others posts: these give uploader coins. around 1 coin per upvote multiplied by (1/(0.05*sqrt(subs))) where subs is subscribers amount. 
+        if user has less than 100 subscribers, round it to 0.1. bigger amounts will decrease coins per upvote
+            the sudden increase in coins at 100 subscribers up to 2 coins per upvote which goes down is intentional
+        example: a user with 
+            400 followers gets 1 coin per upvote
+            1 600 followers gets 0.5 coin per upvote
+            40 000 followers gets 0.1 coin per upvote 
+            160 000 followers gets 0.05 coins per upvote
+            and just for fun =) 100 000 000 followers gets 0.002 coins per upvote, that would make 1 coin per 500 upvotes
+
+        allow people to subscribe to each other: it will slightly boost coins. let it be a modifier of (* sqrt(amountofsubs))
+            lets say a guy with 10 000 subs uploads 10 by 10 img. instead of getting 200 coins, he gets 20 000 coins
+            lets say a guy with 1 000 000 subs uploads an image 32 by 32. instead of getting 2048 coins, he gets 2 048 000 coins
+                (reminder: to get 32 by 32 you need to spend 43 213 coins overall)
+        1 upvote => +0.1 coin
+        1 downvote => scale a big evil face on "my profile" section based on amount of downvotes divided by amount of posts. turn it into square root function size for max size
+        
+
+
+    thanks to coins being attached to a user, i will have to implement registration and login. i am POOR at security so i must add disclaimer to put random password and that nothing is protected.-->
+    <p>to read ideas, open the file</p>
+</body>
+</html>
