@@ -55,7 +55,7 @@ let switchToHEXMode = function()
 
 let addNewPost = function()
 {
-    $('#contentStorage').append('<div class="post"><p>' + translatedBox + '</p></div>') // turn to send requrest
+    $('#contentStorage').append('<div class="post"><p>' + translatedBox + '</p></div>') // turn to send requrest in future
     resetInput();
     
 }
