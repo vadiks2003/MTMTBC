@@ -31,9 +31,9 @@ A: if you found any mistakes i've done that i could've done, i would be very gla
 **Q: i am afraid of viruses/i am on the phone and want to see what this is about**
 A: haha, i knew you're gonna ask it. nah, just kidding i didn't know if anybody would really have to. i actually recorded a video! and uploaded to discord. and i am not quite sure if i can embed a discord video to the readme.md, so next 2 things are screenshot and video both in media and cdn formats
 
-<picture>
-    <source srcset="https://cdn.discordapp.com/attachments/686170987024089160/1039258548762325042/image.png">
-</picture>
+
+![my proj pic](https://cdn.discordapp.com/attachments/686170987024089160/1039258548762325042/image.png)
+
 oh and by the way i found out i can't really embed a video here. here's media discord video 
 
 https://media.discordapp.net/attachments/726496597789245493/1037408101864841216/2022-11-02_18-44-11.mp4
