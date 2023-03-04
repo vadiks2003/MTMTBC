@@ -1,3 +1,36 @@
+//import { mapForBinaryToText } from './binMap.json';
+//import { mapForHEXToText } from './hexMap.json';
+
+let mapForHEXToText;
+let mapForBinaryToText;
+
+// cant turn it into function because 1. returning on load doesnt return anything... 2. cant pass arguments by reference, unless its parameter of an object. which would require me to rewrite a lot of my code and im too lazy
+{
+    const xmlhttpBin = new XMLHttpRequest();
+    xmlhttpBin.onload = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            const jsonObj = JSON.parse(this.responseText);
+            mapForBinaryToText = new Map(Object.entries(jsonObj));
+        }
+    }
+    xmlhttpBin.open("GET", "/json/binMap")  
+    xmlhttpBin.send();
+    
+}
+{
+    const xmlhttpBin = new XMLHttpRequest();
+    xmlhttpBin.onload = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            const jsonObj = JSON.parse(this.responseText);
+            mapForHEXToText = new Map(Object.entries(jsonObj));
+        }
+    }
+    xmlhttpBin.open("GET", "/json/hexMap")  
+    xmlhttpBin.send();
+    
+}
+
+
 var mode = "binary";
 
 var outputBox = "";
@@ -181,147 +214,6 @@ var attemptToTranslate = function()
         }
     }
 }
-
-var mapForHEXToText = new Map([
-    ["00", " "],
-    ["01", "a"],
-    ["02", "b"],
-    ["03", "c"],
-    ["04", "d"],
-    ["05", "e"],
-    ["06", "f"],
-    ["07", "g"],
-    ["08", "h"],
-    ["09", "i"],
-    ["0A", "j"],
-    ["0B", "k"],
-    ["0C", "l"],
-    ["0D", "m"],
-    ["0E", "n"],
-    ["0F", "o"],
-    ["10", "p"],
-    ["11", "q"],
-    ["12", "r"],
-    ["13", "s"],
-    ["14", "t"],
-    ["15", "u"],
-    ["16", "v"],
-    ["17", "w"],
-    ["18", "x"],
-    ["19", "y"],
-    ["1A", "z"],
-    ["1B", "1"],
-    ["1C", "2"],
-    ["1D", "3"],
-    ["1E", "4"],
-    ["1F", "5"],
-    ["20", "6"],
-    ["21", "A"],
-    ["22", "B"],
-    ["23", "C"],
-    ["24", "D"],
-    ["25", "E"],
-    ["26", "F"],
-    ["27", "G"],
-    ["28", "H"],
-    ["29", "I"],
-    ["2A", "J"],
-    ["2B", "K"],
-    ["2C", "L"],
-    ["2D", "M"],
-    ["2E", "N"],
-    ["2F", "O"],
-    ["30", "P"],
-    ["31", "Q"],
-    ["32", "R"],
-    ["33", "S"],
-    ["34", "T"],
-    ["35", "U"],
-    ["36", "V"],
-    ["37", "W"],
-    ["38", "X"],
-    ["39", "Y"],
-    ["3A", "Z"],
-    ["3B", "7"],
-    ["3C", "8"],
-    ["3D", "9"],
-    ["3E", "0"],
-    ["3F", "!"],
-    ["40", " "],
-    ["41", ","],
-    ["42", "."]
-])
-
-var mapForBinaryToText = new Map([
-    ["00000000", " "],
-    ["00000001", "a"],
-    ["00000010", "b"],
-    ["00000011", "c"],
-    ["00000100", "d"],
-    ["00000101", "e"],
-    ["00000110", "f"],
-    ["00000111", "g"],
-    ["00001000", "h"],
-    ["00001001", "i"],
-    ["00001010", "j"],
-    ["00001011", "k"],
-    ["00001100", "l"],
-    ["00001101", "m"],
-    ["00001110", "n"],
-    ["00001111", "o"],
-    ["00010000", "p"],
-    ["00010001", "q"],
-    ["00010010", "r"],
-    ["00010011", "s"],
-    ["00010100", "t"],
-    ["00010101", "u"],
-    ["00010110", "v"],
-    ["00010111", "w"],
-    ["00011000", "x"],
-    ["00011001", "y"],
-    ["00011010", "z"],
-    ["00011011", "1"],
-    ["00011100", "2"],
-    ["00011101", "3"],
-    ["00011110", "4"],
-    ["00011111", "5"],
-    ["00100000", "6"],
-    ["00100001", "A"],
-    ["00100010", "B"],
-    ["00100011", "C"],
-    ["00100100", "D"],
-    ["00100101", "E"],
-    ["00100110", "F"],
-    ["00100111", "G"],
-    ["00101000", "H"],
-    ["00101001", "I"],
-    ["00101010", "J"],
-    ["00101011", "K"],
-    ["00101100", "L"],
-    ["00101101", "M"],
-    ["00101110", "N"],
-    ["00101111", "O"],
-    ["00110000", "P"],
-    ["00110001", "Q"],
-    ["00110010", "R"],
-    ["00110011", "S"],
-    ["00110100", "T"],
-    ["00110101", "U"],
-    ["00110110", "V"],
-    ["00110111", "W"],
-    ["00111000", "X"],
-    ["00111001", "Y"],
-    ["00111010", "Z"],
-    ["00111011", "7"],
-    ["00111100", "8"],
-    ["00111101", "9"],
-    ["00111110", "0"],
-    ["00111111", "!"],
-    ["01000000", " "],
-    ["01000001", ","],
-    ["01000010", "."]
-]
-);
 
 // type in hex part
 $( "#inputHEX_0" ).click(function(){
