@@ -22,9 +22,3 @@ Q: How do you plan to make "Draw an image"?
 A: WebGL probably. Have no better ideas, the only other idea i have is to make everything through DIVs.
 
 On what exactly it's gonna do, open pages/upgrade.html file and read the comments.
-
-<img src="https://cdn.discordapp.com/attachments/686170987024089160/1039258548762325042/image.png" width="500"> 
-
-video demonstration
-
-https://cdn.discordapp.com/attachments/726496597789245493/1037408101864841216/2022-11-02_18-44-11.mp4
